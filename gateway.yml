@@ -1,6 +1,11 @@
 server:
   port: 8080
 
+jwt:
+  secret: ${JWT_SECRET}
+  token:
+    validity: ${JWT_TOKEN_VALIDITY}
+
 spring:
   cloud:
     gateway:
