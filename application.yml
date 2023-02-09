@@ -1,6 +1,11 @@
 server:
   port: 0
 
+jwt:
+  secret: ${JWT_SECRET}
+  token:
+    validity: ${JWT_TOKEN_VALIDITY}
+
 eureka:
   instance:
     hostname: localhost
