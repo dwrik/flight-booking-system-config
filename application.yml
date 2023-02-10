@@ -9,7 +9,8 @@ eureka:
 
 spring:
   jpa:
-    hibernate: update
+    hibernate:
+      ddl-auto: update
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system
     username: ${DB_USERNAME}
