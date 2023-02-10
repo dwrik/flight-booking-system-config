@@ -6,3 +6,12 @@ eureka:
     hostname: localhost
     preferIpAddress: true
     instanceId: ${spring.application.name}-${random.value}
+
+spring:
+  jpa:
+    hibernate: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class: com.mysql.cj.jdbc.Driver
