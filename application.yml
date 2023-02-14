@@ -11,6 +11,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    open-in-view: false
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system
     username: ${DB_USERNAME}
