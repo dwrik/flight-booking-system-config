@@ -10,10 +10,5 @@ eureka:
 spring:
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     open-in-view: false
-  datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    driver-class: com.mysql.cj.jdbc.Driver

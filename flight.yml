@@ -1,4 +1,11 @@
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system_flight?createDatabaseIfNotExist=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  cloud:
+    stream:
+      bindings:
+        onFlightIdReceive-in-0:
+          destination: booking-deletion
+          group: flight-consumers
