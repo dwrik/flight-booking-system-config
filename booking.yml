@@ -3,3 +3,9 @@ spring:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system_booking
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+  cloud:
+    stream:
+      bindings:
+        onCheckinDtoReceive-in-0:
+          destination: checkin-update
+          group: booking-consumers
