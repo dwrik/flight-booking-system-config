@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/flight_booking_system_checkin
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  cloud:
+    stream:
+      bindings:
+        onPendingCheckinReceive-in-0:
+          destination: pending-checkin
+          group: checkin-consumers
+        onBookingIdReceive-in-0:
+          destination: booking-deletion
+          group: checkin-consumers
