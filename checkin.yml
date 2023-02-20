@@ -9,6 +9,6 @@ spring:
         onPendingCheckinReceive-in-0:
           destination: pending-checkin
           group: pending-checkin-consumers
-        onBookingIdReceive-in-0:
+        onBookingIdReceive-in-1:
           destination: booking-deletion
           group: checkin-consumers
