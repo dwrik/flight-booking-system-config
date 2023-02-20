@@ -5,12 +5,12 @@ spring:
     password: ${DB_PASSWORD}
   cloud:
     function:
-      definition: onPendingCheckinReceive;onBookingIdReceive
+      definition: "onPendingCheckinReceive;onBookingIdReceive"
     stream:
       bindings:
         onPendingCheckinReceive-in-0:
           destination: pending-checkin
           group: pending-checkin-consumers
-        onBookingIdReceive-in-1:
+        onBookingIdReceive-in-0:
           destination: booking-deletion
           group: checkin-consumers
