@@ -10,7 +10,7 @@ spring:
       bindings:
         onPendingCheckinReceive-in-0:
           destination: pending-checkin
-          group: checkin-consumers
+          group: pending-checkin-consumers
         onBookingIdReceive-in-1:
           destination: booking-deletion
           group: checkin-consumers
