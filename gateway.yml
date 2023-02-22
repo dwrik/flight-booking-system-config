@@ -14,10 +14,9 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedHeaders: "*"
+            allowedOrigins: "http://localhost:3000"
             allowedMethods:
               - GET
               - POST
