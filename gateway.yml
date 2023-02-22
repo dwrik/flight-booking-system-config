@@ -17,7 +17,8 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "http://localhost:3000"
+            allowedHeaders: "*"
             allowedMethods:
-            - GET
-            - POST
-            - DELETE
+              - GET
+              - POST
+              - DELETE
