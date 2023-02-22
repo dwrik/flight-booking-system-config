@@ -18,4 +18,10 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+            allowedHeaders:
+              - Authorization
+              - Content-Type
